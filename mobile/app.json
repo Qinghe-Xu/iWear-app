@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "iWear",
+    "slug": "iwear",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "iwear",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "backgroundColor": "#FAFAF7"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "app.iwear.mobile"
+    },
+    "android": {
+      "package": "app.iwear.mobile",
+      "adaptiveIcon": {
+        "backgroundColor": "#FAFAF7",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro",
+      "output": "single"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-image",
+      "expo-secure-store",
+      "expo-font",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "iWear 需要访问相册，以便你选择衣物照片和形象照。",
+          "cameraPermission": "iWear 需要使用相机，以便你拍摄衣物照片。"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

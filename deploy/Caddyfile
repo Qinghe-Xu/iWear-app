@@ -1,0 +1,17 @@
+# iWear 反向代理。读写超时必须不小于 240 秒（试穿接口同步等待上限 210 秒）。
+iwear.example.com {
+	encode zstd gzip
+
+	reverse_proxy 127.0.0.1:8000 {
+		transport http {
+			read_timeout 240s
+			write_timeout 240s
+		}
+	}
+
+	header {
+		X-Content-Type-Options nosniff
+		Referrer-Policy strict-origin-when-cross-origin
+		-Server
+	}
+}

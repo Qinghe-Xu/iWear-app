@@ -1,0 +1,24 @@
+[Unit]
+Description=iWear backend
+After=network.target
+
+[Service]
+Type=simple
+User=iwear
+Group=iwear
+WorkingDirectory=/srv/iwear/backend
+# 密钥只从 backend/.env 读取（权限 600，属主 iwear），不要写在这里
+ExecStart=/srv/iwear/backend/.venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8000 --workers 1
+Restart=on-failure
+RestartSec=3
+Environment=PYTHONUNBUFFERED=1
+
+# 基本加固
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/srv/iwear/backend/data
+
+[Install]
+WantedBy=multi-user.target
