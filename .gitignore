@@ -1,0 +1,19 @@
+.env
+.env.*
+!.env.example
+backend/data/
+backend/uploads/
+
+# 本地环境与产物
+.venv/
+__pycache__/
+*.pyc
+node_modules/
+.expo/
+dist/
+web-build/
+.DS_Store
+generated-images/
+
+# 需求文档与备份不对外公开
+iwear-prd*.md
