@@ -4,17 +4,6 @@
 
 需求文档：[`iwear-prd.md`](iwear-prd.md)（V1.2，开发以该文档为准）。
 
-## 当前进度
-
-| 里程碑 | 状态 |
-| --- | --- |
-| M0 生图接口连通性验证 | ✅ 完成（结论见 PRD 附录 A：`/responses` 不可用，改用 `/images/generations` 与 `/images/edits`） |
-| M1 工程骨架 | ✅ 登录、四标签导航、双主题、用户资料、注销 |
-| M2 衣橱 | ⏳ 下一步 |
-| M3 形象照与试穿 | ⏳ |
-| M4 搭配师 | ⏳ |
-| M5 收尾 | ⏳ |
-
 ## 技术栈
 
 - 客户端：Expo SDK 58、React Native 0.88、React 19.3、TypeScript、Expo Router、expo-image、lucide-react-native
